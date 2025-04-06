@@ -2,12 +2,12 @@
 {
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "client": "npm start --prefix ./client",
-    "client:build": "npm run build --prefix ./client",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run client:build && echo \"Building server...\" && npm install --production && echo \"Full build complete\""
+      "start": "node server.js",                    // for local dev only
+  "server": "nodemon server.js",                // for local dev
+  "client": "npm start --prefix ./client",      // run frontend locally
+  "client:build": "npm run build --prefix ./client", // build frontend
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "build": "npm run client:build" 
   },
   "keywords": [],
   "author": "",
