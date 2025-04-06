@@ -6,8 +6,8 @@
     "server": "nodemon server.js",
     "client": "npm start --prefix ./client",
     "client:build": "npm run build --prefix ./client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
-    
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run client:build && echo \"Building server...\" && npm install --production && echo \"Full build complete\""
   },
   "keywords": [],
   "author": "",
