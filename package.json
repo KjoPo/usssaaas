@@ -7,7 +7,7 @@
     "client": "npm start --prefix ./client",
     "client:build": "npm run build --prefix ./client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm run client:build && echo \"Building server...\" && npm install --production && echo ""
+    "build": "npm run client:build && echo \"Building server...\" && npm install --production && echo "
   },
   "keywords": [],
   "author": "",
