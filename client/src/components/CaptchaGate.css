@@ -1,0 +1,221 @@
+/* Base Styles */
+.captcha-gate-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .usps-header {
+    background-color: #004B87;
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .usps-logo {
+    height: 50px;
+    margin-bottom: 1rem;
+  }
+  
+  .captcha-gate-main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .captcha-form {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+  }
+  
+  .captcha-form h2 {
+    color: #004B87;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  .captcha-form p {
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+  
+  .captcha-display {
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  .captcha-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1.1rem;
+    border: 2px solid #dee2e6;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    text-align: center;
+    transition: all 0.3s;
+  }
+  
+  .captcha-input:focus {
+    border-color: #004B87;
+    box-shadow: 0 0 0 0.25rem rgba(0,75,135,0.25);
+    outline: none;
+  }
+  
+  .input-error {
+    border-color: #dc3545;
+  }
+  
+  .captcha-error-message {
+    color: #dc3545;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    opacity: 0;
+    height: 0;
+    transition: all 0.3s;
+  }
+  
+  .error-show {
+    opacity: 1;
+    height: auto;
+  }
+  
+  .captcha-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .captcha-refresh {
+    background: none;
+    border: none;
+    color: #004B87;
+    cursor: pointer;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s;
+  }
+  
+  .captcha-refresh:hover {
+    background-color: #e9ecef;
+  }
+  
+  .captcha-refresh:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  .captcha-submit {
+    background-color: #004B87;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex: 1;
+    max-width: 200px;
+  }
+  
+  .captcha-submit:hover {
+    background-color: #003366;
+  }
+  
+  .captcha-submit:disabled {
+    background-color: #7a9cc6;
+    cursor: not-allowed;
+  }
+  
+  .captcha-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 0.5rem;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Animation */
+  .captcha-error-shake {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%, 60% { transform: translateX(-5px); }
+    40%, 80% { transform: translateX(5px); }
+  }
+  
+  /* Footer */
+  .captcha-footer {
+    background-color: #004B87;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .captcha-form {
+      padding: 1.5rem;
+      margin: 1rem;
+    }
+    
+    .captcha-footer {
+      flex-direction: column;
+    }
+    
+    .captcha-submit {
+      max-width: 100%;
+      width: 100%;
+      order: -1;
+    }
+    
+    .captcha-refresh {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .captcha-form {
+      padding: 1.25rem;
+    }
+    
+    .captcha-form h2 {
+      font-size: 1.5rem;
+    }
+    
+    .usps-header {
+      padding: 1rem 0;
+    }
+    
+    .usps-logo {
+      height: 40px;
+    }
+  }

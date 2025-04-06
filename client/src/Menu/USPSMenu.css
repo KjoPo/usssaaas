@@ -1,0 +1,160 @@
+.usps-header {
+    background-color: white;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .usps-header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+  }
+  
+  .usps-logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #004B87;
+    text-decoration: none;
+    margin-right: 30px;
+  }
+  
+  .usps-nav {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    background-color: #f5f5f5;
+    padding: 5px 15px;
+    border-radius: 4px;
+  }
+  
+  .usps-nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  
+  .usps-nav-item {
+    position: relative;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    margin-right: 15px;
+  }
+  
+  .usps-nav-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  
+  /* Quick Tools Link Specific Styles */
+  .quick-tools-wrapper {
+    position: relative;
+  }
+  
+  .quick-tools-link {
+    background-color: #004B87;
+    color: white !important;
+    transform: skewX(-15deg);
+    padding: 0 25px;
+  }
+  
+  .quick-tools-link span {
+    display: inline-block;
+    transform: skewX(15deg);
+  }
+  
+  .red-strip {
+    position: absolute;
+    right: -4px;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #D22630;
+    transform: skewX(-15deg);
+  }
+  
+  .search-icon-item {
+    margin-left: auto;
+    padding-right: 10px;
+  }
+  
+  .search-icon {
+    color: #000;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .search-icon svg {
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #000;
+    fill: #000;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 992px) {
+    .usps-header-container {
+      flex-direction: column;
+    }
+    
+    .usps-logo {
+      margin: 10px 0;
+      align-self: flex-start;
+    }
+    
+    .usps-nav {
+      width: 100%;
+      padding: 5px 10px;
+    }
+    
+    .usps-nav-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 5px;
+    }
+    
+    .usps-nav-item {
+      margin: 0;
+      height: 35px;
+      justify-content: center;
+    }
+    
+    .quick-tools-link {
+      transform: none;
+      justify-content: center;
+    }
+    
+    .quick-tools-link span {
+      transform: none;
+    }
+    
+    .red-strip {
+      display: none;
+    }
+    
+    .search-icon-item {
+      margin-left: 0;
+      grid-column: span 4;
+      text-align: center;
+      padding: 10px 0;
+    }
+  }

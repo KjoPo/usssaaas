@@ -1,0 +1,259 @@
+/* Payment Container - Full width */
+.usps-payment-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 20px min(5%, 40px); /* Responsive side padding */
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f7f7f7; /* Changed to match footer background */
+    box-shadow: none;
+    border-radius: 0;
+}
+  /* Tracking Header - Full width */
+  .tracking-header {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #004B87;
+    width: 100%;
+  }
+  
+  .tracking-header h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .tracking-label {
+    color: #004B87;
+    font-weight: bold;
+  }
+  
+  /* Status Notification - Full width */
+  .status-notification {
+    background-color: #fff; /* Changed from #f8f9fa to white */
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-left: 4px solid #d9534f;
+    border: 1px solid #dadada; /* Similar to footer borders */
+    border-radius: 5px;
+}
+  
+  .status-notification-text {
+    display: flex;
+    flex-direction: column; /* Changed from row to column */
+    gap: 5px;
+  }
+  
+  .status-notification-label {
+    color: #004B87;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .status-notification-message {
+    color: #d9534f;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 5px; /* Added space between lines */
+  }
+  
+  /* Tracking Message - Full width */
+  .tracking-message {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+    width: 100%;
+  }
+  
+  /* Payment Form - Full width */
+  .payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* Optional subtle shadow */
+}
+
+  
+  .payment-header {
+    font-size: 20px;
+    color: #004B87;
+    margin-bottom: 20px;
+    font-weight: bold;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #004B87;
+    width: 100%;
+  }
+  
+  /* Form Styles */
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+    width: 100%;
+  }
+  
+  .form-group input:focus {
+    border-color: #004B87;
+    outline: none;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  /* Form Footer */
+  .form-footer {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  /* Button */
+  .usps-button {
+    background-color: #004B87;
+    color: white;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: auto;
+    max-width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .usps-button:hover {
+    background-color: #003366;
+  }
+  
+  .usps-button:disabled {
+    background-color: #7a9cc6;
+    cursor: not-allowed;
+  }
+  
+  /* Loading Spinner */
+  .usps-spinner {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 5px;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Error Message */
+  .usps-error {
+    color: #d9534f;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    width: 100%;
+  }
+  /* Improved Responsive CSS */
+@media (max-width: 768px) {
+    /* Adjust layout for tablets */
+    .form-row {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .usps-button {
+      width: 100%;
+      max-width: none;
+      padding: 12px 20px;
+    }
+  
+    .payment-header {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Mobile-specific adjustments */
+    .usps-payment-container {
+        border-top: 1px solid #dadada; /* Same as footer's border */
+    }
+    
+  
+    .tracking-header h1 {
+      font-size: 16px;
+    }
+  
+    .status-notification-label,
+    .status-notification-message {
+      font-size: 14px;
+    }
+  
+    .form-group input {
+      padding: 10px;
+    }
+  
+    .tracking-message {
+        background-color: #fff; /* Changed from #f8f9fa to white */
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: 1.5;
+        width: 100%;
+        border: 1px solid #dadada; /* Similar to footer borders */
+    }
+  }
+  
+  /* Base Improvements */
+  .usps-payment-container {
+    padding: 20px min(5%, 40px); /* Responsive side padding */
+  }
+  
+  .form-group input {
+    padding: 12px 15px; /* Better touch targets */
+    font-size: clamp(14px, 2vw, 16px); /* Fluid typography */
+  }
+  
+  .tracking-header h1 {
+    font-size: clamp(16px, 2vw, 18px); /* Fluid typography */
+  }
