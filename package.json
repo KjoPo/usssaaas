@@ -1,5 +1,6 @@
 {
-
+  "name": "upsc",
+  "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -28,12 +29,5 @@
     "react-router-dom": "^7.4.1",
     "socks-proxy-agent": "^8.0.5"
   }
-  'script':
-{
-   "dev": "next dev",
-             ==>  "build": "next build", 
-    "start": "next start",
-    "lint": "next lint"
+  
 }
-}
-
