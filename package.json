@@ -4,7 +4,6 @@
   "scripts": {
       "start": "node server.js",                    
   "server": "nodemon server.js",                  
-  "client:build": "npm run build  ./client", 
   "dev": "concurrently \"npm run server\" \"npm run client\"",
   "build": "npm run client:build" 
   },
